@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+    <h1>
+        <section class="book" id="book">
+
+            <h1 class="heading">
+                <span>b</span>
+                <span>o</span>
+                <span>o</span>
+                <span>k</span>
+                <span class="space"></span>
+                <span>n</span>
+                <span>o</span>
+                <span>w</span>
+            </h1>
+        
+            <div class="row">
+        
+                <div class="image">
+                    <img src="images/book-img.svg" alt="">
+                </div>
+        
+               <form action="">
+                   <!-- <div class="inputBox">
+                        <h3>where to</h3>
+                        <input type="text" placeholder="place name">
+                    </div>-->
+                    <h4>Check availability for <em>direction</em>:</h4>
+                                        <form id="form-submit" action="" method="get">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <fieldset>
+                                                        <label for="from">From:</label>
+                                                        <select required name='from' onchange=''>
+                                                            <option value="">Select a location...</option>
+                                                            <option value="WA">WA</option>
+                                                            <option value="Bolgatanga">Bolgatanga</option>
+                                                            <option value="Techiman">Techiman</option>
+                                                            <option value="Ashaiman">Ashaiman</option>
+                                                            <option value="Obuasi">Obuasi</option>
+                                                            <option value="Sunyani">Sunyani</option>
+                                                            <option value="Koforidua">Koforidua</option>
+                                                            <option value="Tema">Tema</option>
+                                                            <option value="Tarkwa">Tarkwa</option>
+                                                            <option value="Takoradi">Takoradi</option>
+                                                            <option value="Accra">Accra</option>
+                                                            <option value="sekondi-Takoradi">sekondi-Takoradi</option>
+                                                            <option value="Hohoe">Hohoe</option>
+                                                            <option value="cape coast">cape coast</option>
+                                                            <option value="Teshie">Teshie</option>
+                                                            <option value="Konongo">Konongo</option>
+                                                            <option value="Goaso">Goaso</option>
+                                                            <option value="Mankessim">Mankessim</option>
+                                                            <option value="Mampong">Mampong</option>
+                                                            <option value="Dunkwa">Dunkwa</option>
+                                                            <option value="Ejisu">Sefwi</option>
+                                                            <option value="Ejisu">Ejisu</option>
+                                                            <option value="Wenniba">Wenniba</option>
+                                                            <option value="Temale">Temale</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <fieldset>
+                                                        <label for="to">To:</label>
+                                                        <select required name='to' onchange=''>
+                                                            <option value="">Select a location...</option>
+                                                            <option value="WA">WA</option>
+                                                            <option value="Bolgatanga">Bolgatanga</option>
+                                                            <option value="Techiman">Techiman</option>
+                                                            <option value="Ashaiman">Ashaiman</option>
+                                                            <option value="Obuasi">Obuasi</option>
+                                                            <option value="Sunyani">Sunyani</option>
+                                                            <option value="Koforidua">Koforidua</option>
+                                                            <option value="Tema">Tema</option>
+                                                            <option value="Tarkwa">Tarkwa</option>
+                                                            <option value="Takoradi">Takoradi</option>
+                                                            <option value="Accra">Accra</option>
+                                                            <option value="sekondi-Takoradi">sekondi-Takoradi</option>
+                                                            <option value="Hohoe">Hohoe</option>
+                                                            <option value="cape coast">cape coast</option>
+                                                            <option value="Teshie">Teshie</option>
+                                                            <option value="Konongo">Konongo</option>
+                                                            <option value="Goaso">Goaso</option>
+                                                            <option value="Mankessim">Mankessim</option>
+                                                            <option value="Mampong">Mampong</option>
+                                                            <option value="Dunkwa">Dunkwa</option>
+                                                            <option value="Ejisu">Sefwi</option>
+                                                            <option value="Ejisu">Ejisu</option>
+                                                            <option value="Wenniba">Wenniba</option>
+                                                            <option value="Temale">Temale</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+        
+                    <div class="inputBox">
+                        <h3>how many</h3>
+                        <input type="number" placeholder="number of guests">
+                    </div>
+                    <div class="inputBox">
+                        <h3>arrivals</h3>
+                        <input type="date">
+                    </div>
+                    <div class="inputBox">
+                        <h3>leaving</h3>
+                        <input type="date">
+                    </div>
+                    <input type="submit" class="btn" value="book now">
+                   
+      </body>
+    </html>
+
+</body>
+</html>
