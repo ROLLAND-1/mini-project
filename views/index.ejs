@@ -32,13 +32,26 @@
         <a href="/services">services</a>
         <a href="/gallery">gallery</a>
         <a href="/review">review</a>
+        
         <a href="/contact">contact</a>
+        <% if (!loggedIn) { %>
+         
+            <a href="/signup">signup</a>
+        <% } else { %>
+            <a href="/logout">logout</a>
+            <% } %> 
+
+
         
     </nav>
 
+    
     <div class="icons">
         <i class="fas fa-search" id="search-btn"></i>
-        <i class="fas fa-user" id="login-btn"></i>
+        <% if (!loggedIn) { %>
+     
+            <i class="fas fa-user" id="login-btn"></i>
+            <% } %>
     </div>
 
     <form action="" class="search-bar-container">
@@ -56,10 +69,10 @@
 
     <i class="fas fa-times" id="form-close"></i>
 
-    <form action="">
+    <form id="reg-form" action="abc">
         <h3>login</h3>
-        <input type="email" class="box" placeholder="enter your email">
-        <input type="password" class="box" placeholder="enter your password">
+        <input id="email" type="email" class="box" placeholder="enter your email">
+        <input id="password" type="password" class="box" placeholder="enter your password">
         <input type="submit" value="login now" class="btn">
         <input type="checkbox" id="remember">
         <label for="remember">remember me</label>
@@ -205,18 +218,75 @@
                                             </fieldset>
                                         </div>
 
-            <div class="inputBox">
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
-            </div>
-            <div class="inputBox">
+                                        <div class="inputBox">
+                                            <h3>number of adult</h3>
+                                            <input type="number" placeholder="number of guests">
+                                        </div>
+                                        <p>
+                                        <div class="inputBox">
+                                            <h3>number of children</h3>
+                                            <input type="number" placeholder="number of guests">
+                                        </div>
+                    
+                                        <div class="inputBox">
+                                        </p>
+                                        <p>
+                                            <div class="inputBox">
+                                                <h3>seat number</h3>
+                                         <input type="number" placeholder="number of seat">
+                                            </div>
+                        
+                      <div class="inputBox">
+                                            </p>
                 <h3>arrivals</h3>
                 <input type="date">
+                
             </div>
             <div class="inputBox">
                 <h3>leaving</h3>
                 <input type="date">
             </div>
+            <p>
+                <!-- Current Date -->
+Current Date:
+<input type="text" id="currentDate">
+<br><br>
+<script>
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  document.getElementById("currentDate").value = date;
+</script>
+<!-- Current Time -->
+Current Time:
+<input type="text" id="currentTime">
+<br><br>
+<script>
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  document.getElementById("currentTime").value = time;
+</script>
+<!-- Current Date and Time -->
+Get Current Date and Time Both:
+<input type="text" id="currentDateTime">
+<br><br>
+<script>
+  var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+  document.getElementById("currentDateTime").value = dateTime;
+</script>
+            </p>
+            <p>
+                <div>
+                    <input type="checkbox" id="luggage">
+                    <label for="luggage">luggage</label>
+                </div></p>
+                <p>
+                    <div>
+                        <input type="checkbox" id="without luggage">
+                        <label for="without luggage">without luggage</label>
+                    </div></p>
             <input type="submit" class="btn" value="book now">
             
 
@@ -315,190 +385,7 @@
             </div>
         </div>
 
-        <div class="box">
-            <img src="images/p-5.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> Accra </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-6.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> kumasi </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="#" class="btn">book now</a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-<div class="colorlib-tour colorlib-light-grey">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
-                <h2>Popular Destination</h2>
-                <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-        </div>
-    </div>
-    <div class="tour-wrap">
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-1.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Athens, Greece</h2>
-                <span class="city">Athens, Greece</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-2.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Family Tour in Thailand</h2>
-                <span class="city">Athens, Greece</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-3.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Family Tour in Philippines</h2>
-                <span class="city">Lipa, Philippines</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-4.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Family Tour in Greece</h2>
-                <span class="city">Athens, Greece</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-5.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Family Tour in Greece</h2>
-                <span class="city">Athens, Greece</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-6.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Family Tour in Greece</h2>
-                <span class="city">Athens, Greece</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-7.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Family Tour in Greece</h2>
-                <span class="city">Athens, Greece</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-        <a href="#" class="tour-entry animate-box">
-            <div class="tour-img" style="background-image: url(images/tour-8.jpg);">
-            </div>
-            <span class="desc">
-                <p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
-                <h2>Family Tour in Greece</h2>
-                <span class="city">Athens, Greece</span>
-                <span class="price">GH$450</span>
-            </span>
-        </a>
-    </div>
-</div>
-
-
-<!-- packages section ends -->
-
-<!-- services section starts  -->
-
-<section class="services" id="services">
-
-    <h1 class="heading">
-        <span>s</span>
-        <span>e</span>
-        <span>r</span>
-        <span>v</span>
-        <span>i</span>
-        <span>c</span>
-        <span>e</span>
-        <span>s</span>
-    </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <i class="fas fa-hotel"></i>
-            <h3>affordable hotels</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-utensils"></i>
-            <h3>food and drinks</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-bullhorn"></i>
-            <h3>safty guide</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-globe-asia"></i>
-            <h3>around the world</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-plane"></i>
-            <h3>fastest travel</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-        <div class="box">
-            <i class="fas fa-hiking"></i>
-            <h3>adventures</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore commodi earum, quis voluptate exercitationem ut minima itaque iusto ipsum corrupti!</p>
-        </div>
-
-    </div>
-
-</section>
+      
 
 <!-- services section ends -->
 

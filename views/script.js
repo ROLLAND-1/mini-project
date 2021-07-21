@@ -6,7 +6,34 @@ let formClose = document.querySelector('#form-close');
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let videoBtn = document.querySelectorAll('.vid-btn');
+const form = document.getElementById('reg-form')
+console.log(form)
+form.addEventListener('submit',async (e)=> {
+  e.preventDefault()
+  const email = form.querySelector('#email').value
+  const password = form.querySelector('#password').value
+  try {
+    const reqObject = {
+      method: 'POST',
+      body: JSON.stringify({email,password}),
+      headers: {"Content-Type":"application/json"}
+    }
+    const res = await fetch("/login",reqObject)
+    const data = await res.json()
+    console.log(data)
+    if(data.success){
+      window.location = '/';
+    }
+    if (data.failure) {
+      console.log('you are a failure sucker')
+      
+    }
+  } catch (error) {
+    console.log('there was an error')
+  }
+  console.log(email,' ',password)
 
+})
 window.onscroll = () =>{
     searchBtn.classList.remove('fa-times');
     searchBar.classList.remove('active');

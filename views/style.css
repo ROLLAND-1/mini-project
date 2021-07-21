@@ -297,6 +297,7 @@ header .search-bar-container label:hover{
   flex-wrap: wrap;
   gap:1.5rem;
   align-items: center;
+  background-color: aquamarine;
 }
 
 .book .row .image{
@@ -332,6 +333,16 @@ header .search-bar-container label:hover{
   padding:1rem 0;
   color:#666;
 }
+.book .row form .inputBox p{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#666;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  
+}
+
 
 .packages .box-container{
   display: flex;

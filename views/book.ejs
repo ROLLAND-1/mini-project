@@ -110,10 +110,25 @@
                                                 </div>
         
                     <div class="inputBox">
-                        <h3>how many</h3>
+                        <h3>how many adult</h3>
                         <input type="number" placeholder="number of guests">
                     </div>
+                    <p>
                     <div class="inputBox">
+                        <h3>how many children</h3>
+                        <input type="number" placeholder="number of guests">
+                    </div>
+
+                    <div class="inputBox">
+                    </p>
+                    <p>
+                        <div class="inputBox">
+                            <h3>seat number</h3>
+                            <input type="number" placeholder="number of seat">
+                        </div>
+    
+                        <div class="inputBox">
+                        </p>
                         <h3>arrivals</h3>
                         <input type="date">
                     </div>
@@ -121,6 +136,52 @@
                         <h3>leaving</h3>
                         <input type="date">
                     </div>
+                    <p>
+                        <!-- Current Date -->
+        Today's Date:
+        <input type="text" id="currentDate">
+        <br><br>
+        <script>
+          var today = new Date();
+          var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+          document.getElementById("currentDate").value = date;
+          setInterval(function(){
+  document.getElementById("clock").innerText = moment().format('MMMM Do YYYY, h:mm:ss a');  
+},1000)
+        </script>
+        <!-- Current Time -->
+        Current Time:
+        <input type="text" id="currentTime">
+        <br><br>
+        <script>
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+          document.getElementById("currentTime").value = time;
+          
+        </script>
+        <!-- Current Date and Time -->
+        Get Current Date and Time Both:
+        <input type="text" id="currentDateTime">
+        <br><br>
+        <script>
+          var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+          document.getElementById("currentDateTime").value = dateTime;
+        </script>
+                    </p>
+                   
+                    <p>
+                    <div>
+                        <input type="checkbox" id="luggage">
+                        <label for="luggage">luggage</label>
+                    </div></p>
+                    <p>
+                        <div>
+                            <input type="checkbox" id="without luggage">
+                            <label for="without luggage">without luggage</label>
+                        </div></p>
                     <input type="submit" class="btn" value="book now">
                    
       </body>

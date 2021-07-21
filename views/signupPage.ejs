@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="/auth.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body>
+    <div class="sign-in-page">
+      <header class="header">
+        <a href="/">
+          <img src="/images/logo.png" alt="logo" />
+        </a>
+      </header>
+      <div class="main-application">
+        <!-- <header class="main-header"> -->
+        <h2>Sign up to Red Store</h2>
+
+        <!-- </header> -->
+        <div class="form-body">
+          <form>
+            <div class="form-fields signUp">
+              <label for="email">Email address </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+              />
+              <div class="email error"></div>
+            </div>
+            <div class="form-fields signUp">
+              <label for="telephone">Telephone </label>
+              <input type="tel" id="tel" name="tel" class="form-control" />
+              <div class="telephone error"></div>
+            </div>
+            <div class="form-fields signUp password">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+              />
+              <div class="password error"></div>
+              <!-- <a href="/login.html">Forgot password?</a> -->
+              <span class="tooltiptext"
+                >password should be 8 characters long and contain at least one
+                digit</span
+              >
+            </div>
+
+            <div class="form-fields">
+              <button type="submit" class="submit form-control">
+                Create account
+              </button>
+
+              <div class="loader-body">
+                <div class="loader"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <p class="flash-card">
+          Already have an account? <a href="/">Sign in</a>
+        </p>
+      </div>
+    </div>
+    <script src="/scripts/signUp.js"></script>
+  </body>
+</html>

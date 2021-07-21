@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* .sign-in-page {
+  background: url(/images/bag7.png) center no-repeat;
+} */
+.sign-in-page .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100px;
+  padding-top: 15px;
+}
+
+.sign-in-page .main-application {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: calc(100vh - 100px);
+  padding-top: 0.2rem;
+}
+
+.sign-in-page .main-application h2 {
+  text-align: center;
+  font-weight: lighter;
+}
+.form-fields {
+  position: relative;
+}
+.sign-in-page .main-application .form-body {
+  width: 310px;
+  margin: auto;
+  border: 1px solid #eaecef;
+  border-radius: 6px;
+  background: #f6f8fa;
+  font-size: 14px;
+  margin-top: 25px !important;
+  padding: 20px;
+  padding-top: 8px;
+}
+
+/* .sign-in-page .main-application .form-body .iti {
+  background: red;
+  width: 100%;
+} */
+
+.sign-in-page .main-application .form-body form .form-fields .error {
+  color: #e20c0c;
+}
+
+.sign-in-page .main-application .form-body form .form-fields .loader-body {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #53bdb841;
+  border-radius: 6px;
+  height: 32px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sign-in-page
+  .main-application
+  .form-body
+  form
+  .form-fields
+  .loader-body
+  .loader {
+  color: green;
+  border: 1px solid #f3f3f3;
+  /* Light grey */
+  border-top: 1px solid #a2a6a8;
+  /* Blue */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  -webkit-animation: spin 500ms linear infinite;
+  animation: spin 500ms linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.sign-in-page .main-application .form-body form .form-fields .visible {
+  visibility: visible;
+}
+
+.sign-in-page .main-application .form-body form .form-fields label {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.sign-in-page .main-application .form-body form .form-fields a {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #53bdb7;
+}
+
+.sign-in-page .main-application .form-body form .signUp label::after {
+  content: "*";
+  color: #cb2431;
+  padding-left: 5px;
+}
+
+.sign-in-page .main-application .form-body form .signUp .tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: #888585;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom: -1.5rem;
+  right: 0;
+}
+
+.sign-in-page .main-application .form-body form .signUp .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 12px;
+  margin-left: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #888585 transparent;
+}
+
+.sign-in-page .main-application .form-body form .signUp .visible {
+  visibility: visible;
+}
+
+.sign-in-page .main-application .form-body form .form-control {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  width: 100%;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: #e1e4e8;
+  box-shadow: #e1e4e8;
+}
+
+.sign-in-page .main-application .form-body form .submit {
+  background: #53bdb7;
+  color: #ffffff;
+  margin-bottom: 0;
+  letter-spacing: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sign-in-page .main-application .flash-card {
+  width: 310px;
+  margin: 1rem auto 0;
+  border: solid 1px #c5c2c2;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.sign-in-page .main-application .flash-card a {
+  color: #0366d6;
+  font-size: 13px;
+}
+
+.sign-in-page .main-application .flash-error {
+  position: relative;
+  color: #ff7b72;
+  background-color: rgba(255, 0, 0, 0.068);
+  font-size: 13px;
+  border: solid 1px #ff7b7246;
+}
+
+.sign-in-page .main-application .flash-error .close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sign-in-page .main-application .none {
+  display: none;
+}
+
+.sign-in-page .main-application .block {
+  display: block;
+}
+
+#tel {
+  /* right: 0; */
+  /* background: red; */
+  /* padding: 6px; */
+  padding-left: 50px;
+}
+.iti {
+  width: 100%;
+}
