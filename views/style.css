@@ -297,7 +297,7 @@ header .search-bar-container label:hover{
   flex-wrap: wrap;
   gap:1.5rem;
   align-items: center;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .book .row .image{
@@ -697,4 +697,88 @@ h4 .label from{
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+}
+
+.seat{
+  background-color: rgb(53, 50, 48);
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.row{
+  display: flex;
+}
+.seat-container{
+  margin: 20px ;
+}
+.seat-container select{
+  background-color: rgb(97, 89, 89);
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.seat.selected{
+   background-color: rgb(60, 219, 108);
+}
+.seat.occupied{
+  background-color: rgb(224, 44, 12);
+}
+ .seat:nth-of-type(2){
+   margin-right: 18px;
+ }
+ .seat:nth-last-of-type(2){
+   margin-left: 18px;
+ }
+ .seat:not(.occupied):hover{
+   cursor: pointer;
+   transform: scale(1,2);
+ }
+ .showcase .seat:not(.occupied):hover{
+      cursor: default;
+      transform:scale(1);
+ }
+
+ .showcase{
+   background-color: dimgrey;
+   padding: 5px 10px;
+   border-radius: 5px;
+   color: ghostwhite;
+   list-style-type: none;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+ }
+ .showcase li small{
+   margin-left: 10px;
+ }
+ .screen {
+   background-color: rgb(156, 148, 161);
+   height: 70px;
+   width: 100%;
+   margin: 15px 0;
+   transform: rotateX(-45deg);
+   box-shadow: 0 3px 10px rgba(204, 17, 17, 0.75);
+ }
+ .container{
+   perspective: 1000px;
+   margin-bottom: 30px;
+ }
+p.text{
+  margin: 5px 0;
+}
+p.text span{
+  color: #6fea;
 }

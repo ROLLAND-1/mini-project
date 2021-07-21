@@ -94,10 +94,10 @@
 
     <div class="controls">
         <span class="vid-btn active" data-src="images/vid-1.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-5.mp4"></span>
+        <span class="vid-btn " data-src="images/vid-2.mp4"></span>
+        <span class="vid-btn " data-src="images/vid-3.mp4"></span>
+        <span class="vid-btn " data-src="images/vid-4.mp4"></span>
+        <span class="vid-btn " data-src="images/vid-5.mp4"></span>
     </div>
 
     <div class="video-container">
@@ -127,11 +127,11 @@
 
     <div class="row">
 
-        <div class="image">
-            <img src="images/book-img.svg" alt="">
+        <!-- <div class="image"> -->
+            <!-- <img src="images/book-img.svg" alt=""> -->
         </div>
 
-       <form action="">
+       <form action="/book">
            <!-- <div class="inputBox">
                 <h3>where to</h3>
                 <input type="text" placeholder="place name">
@@ -246,6 +246,109 @@
                 <h3>leaving</h3>
                 <input type="date">
             </div>
+            <div class="seat-container">
+                <label>pick a bus</label>
+                <select id="bus">
+                    <option value="1">stc</option>
+                    <option value="2">vip</option>
+                    <option value="3">metro mass</option>
+                    <option value="5">mini van</option>
+                    <option value="6">stc</option>
+                    <option value="7">stc</option>
+                    <option value="8">stc</option>
+                    <option value="9">stc</option>
+                    <option value="10">stc</option>
+                    <option value="11">stc</option>
+                    <option value="12">stc</option>
+                    <option value="">stc</option>
+                    <option value="4">stc</option>
+                    <option value="4">stc</option>
+                    <option value="4">stc</option>
+                </select>
+            </div>
+            <ul class="showcase">
+                <li>
+                    <div class="seat"></div>
+                    <small>N/A</small>
+                </li>
+                <li>
+                    <div class="seat selected"></div>
+                    <small>selected</small>
+                </li>
+
+                <li>
+                    <div class="seat occupied"></div>
+                    <small>occupied</small>
+                </li>
+            </ul>
+            <div class="container">
+                <div class="screen"></div>
+                <div class="row">
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied "></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>   
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>   
+                </div>
+                <div class="row">
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>   
+                </div>
+                
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>   
+                </div>
+                <div class="row">
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>
+                    <div class="seat occupied"></div>
+                    <div class="seat"></div>
+                    <div class="seat"></div>   
+                </div>
+            </div>
+            <p class="text">
+                you have selectd <span id="count">0 </span>seat of a price of GH$ <span id="total">0</span>
+            </p>
+           
             <p>
                 <!-- Current Date -->
 Current Date:
@@ -328,7 +431,7 @@ var dateTime = date+' '+time;
                     <i class="far fa-star"></i>
                 </div>
                 <div class="price"> $40.00 <span>$70.00</span> </div>
-                <a href="book.html" class="btn">book now</a>
+                <a href="/book" class="btn">book now</a>
             </div>
         </div>
 
@@ -345,10 +448,26 @@ var dateTime = date+' '+time;
                     <i class="far fa-star"></i>
                 </div>
                 <div class="price"> $70.00 <span>$120.00</span> </div>
-                <a href="book.html" class="btn">book now</a>
+                <a href="/book" class="btn">book now</a>
             </div>
         </div>
 
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Cape coast </h3>
+                <p>Cape coast is a town in the central Region and it acts as the capital of the region.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> GH$90.00 <span>$120.00</span> </div>
+                <a href="/book" class="btn">book now</a>
+            </div>
+        </div>
         <div class="box">
             <img src="images/p-3.jpg" alt="">
             <div class="content">
@@ -362,7 +481,55 @@ var dateTime = date+' '+time;
                     <i class="far fa-star"></i>
                 </div>
                 <div class="price"> GH$90.00 <span>$120.00</span> </div>
-                <a href="book.html" class="btn">book now</a>
+                <a href="/book" class="btn">book now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Obuase </h3>
+                <p>Obuase is a town in the Ashanti Region and it acts as the capital of the region.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> GH$90.00 <span>$120.00</span> </div>
+                <a href="/book" class="btn">book now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Tema </h3>
+                <p>Tema is a town in the Greater Accra Region and it acts as the capital of the region.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> GH$90.00 <span>$120.00</span> </div>
+                <a href="/book" class="btn">book now</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Tamale </h3>
+                <p>Tamale is a town in the Northern Region and it acts as the capital of the region.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> GH$90.00 <span>$120.00</span> </div>
+                <a href="/book" class="btn">book now</a>
             </div>
         </div>
 
@@ -381,7 +548,7 @@ var dateTime = date+' '+time;
                     <i class="far fa-star"></i>
                 </div>
                 <div class="price"> $90.00 <span>$120.00</span> </div>
-                <a href="book.html" class="btn">book now</a>
+                <a href="/book" class="btn">book now</a>
             </div>
         </div>
 
@@ -406,23 +573,24 @@ var dateTime = date+' '+time;
     <div class="box-container">
 
         <div class="box">
-            <img src="images/g-1.jpg" alt="">
+            <img src="images/k-1.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <p>The purpose of this tour is to bring people closer to our culture and heritage. It also involves outdoor adventures through the Kakum Forest.</p>
                 <a href="gallery.html" class="btn">see more</a>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-2.jpg" alt="">
+            <img src="images/k-4.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <p>Experience the Beauty, History and the Culture Of Accra in a Day
+                </p>
                 <a href="gallery.html" class="btn">see more</a>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-3.jpg" alt="">
+            <img src="images/k-2.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
@@ -430,47 +598,48 @@ var dateTime = date+' '+time;
             </div>
         </div>
         <div class="box">
-            <img src="images/g-4.jpg" alt="">
+            <img src="images/k-3.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <p>Bonwire Namimg Ceremony and Kente Tourist Center
+                    Kumasi, Ghana</p>
                 <a href="#" class="btn">see more</a>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-5.jpg" alt="">
+            <img src="images/k-5.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <p>Aburi Botanical Garden, Forest Reserve and Boti Waterfall Tour (Eastern Region)</p>
                 <a href="#" class="btn">see more</a>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-6.jpg" alt="">
+            <img src="images/k-6.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <p>The Homecoming Experience To Cape-coast And Elmina.</p>
                 <a href="#" class="btn">see more</a>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-7.jpg" alt="">
+            <img src="images/k-7.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <p>Kwame Nkrumah Mausoleum and Memorial Park Tours and Activities</p>
                 <a href="#" class="btn">see more</a>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-8.jpg" alt="">
+            <img src="images/k-8.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <p>Nzulezo - Ghana's village on stilts</p>
                 <a href="#" class="btn">see more</a>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-9.jpg" alt="">
+            <img src="images/k-9.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
